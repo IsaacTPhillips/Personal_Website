@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+* {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #31363f;
+    font-family: "Poppins", sans-serif;
+}
+::-webkit-scrollbar{
+    width: 6px;
+} 
+::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #eeeeee;
+}
+
+.header_navbar {
+    width: 100%;
+    padding: 0 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+.hn_warp{
+    width: 100%;
+    height: 08px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: 0.3s ease-in-out;
+}
+.hn_wrap.navbarActive{
+    top: 10px;
+    border: 2px solid #eeeeee;
+    box-shadow: 4px 4xp #eeeeee;
+    padding: 0 15px;
+    background-color: #eeeeee;
+}
+/* Logo */
+.hn_Logo{
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #eeeeee;
+}
+.hn_Logo > h1{
+    font-size: 17px;
+}
+.hn-Logo > img {
+    width: 5px;
+    height: 5px;
+}
+/* Nav */
+.nav_menu{
+    grid-column:2/4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.nav_menu > ul{
+    display: flex;
+    gap: 30px;
+}
+.nav_menu > ul > li {
+    list-style: none;
+    border-left: 1px solid #76abae;
+    border-right: 1px solid #76abae;
+    padding: 0 8px;
+}
+.nav_menu > ul > li > a {
+    font-size: 14px;
+    color: #eeeeee;
+    transition: 0.3s liner;
+    position: relative;
+}
+.nav_menu > ul > li > a.activeNH{
+    background-color: #76abae;
+    color: #eeeeee;
+    padding: 3px 10px;
+    font-weight: 600;
+}
+.nav_menu > ul > li > a:hover {
+    border-bottom: 1px solid #eeeeee;
+    padding: 3px 10px;
+}
+.theme{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease-in-out;
+}
+.thene:hover{
+    border: 2px solid #eeeeee;
+    box-shadow: 4px 4px #eeeeee;
+}
+.input {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    opacity: 0;
+}
+.icon{
+    position: absolute;
+    top: calc(50% -13px);
+    left: calc(50% -13px);
+    width: 17px;
+    height: 17px;
+}
+.icon,icon-moon{
+    fill: #252525;
+}
+.icon.icon-sun{
+    stroke: #252525;
+    display: none;
+}
+.input:checked ~ .icon.icon-sun{
+    display: block;
+}
+.input:checked ~ .icon.icon-moon{
+    display: none;
+}
+.theme:active{
+    box-shadow: 0px 0px #eeeeee;
+    transform: translate(3px, 3px);
+}
+.firstSection{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-top: 50px;
+}
+#particles-js > canvas {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.fsText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+.fsTextWrap > h3{
+    text-align: center;
+    z-index: 10;
+    color: #76abae;
+    padding-top: 35px;
+}
+.fsTextWrap > h1{
+    text-align: center;
+    z-index: 10;
+    color: #eeeeee;
+}
+.fstyping > span {
+    text-align: center;
+    color: #eeeeee;
+    font-size: 20px;
+}
+.fsTextType > p {
+    text-align: center;
+    position: relative;
+    color:#eeeeee;
+    font-size: 30px;
+}
+.fsDescription > p {
+    text-align: center;
+    color: #eeeeee;
+    font-size: 15px;
+}
+.fsTextType.sec-text:before{
+    content: "";
+    position: absolute;
+    top: 5;
+    left: 0;
+    height: 80%;
+    width: 100%;
+    background: linear-gradient(to top, #76abae, #28a8af);
+    border-left: 10px solid #222831;
+    animation: animate 12s steps(128) infinite;
+}
+@keyframes animate {
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+    100%{
+        left: 0%;
+    }
+}
+.fsIMGCon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.fsimgWrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 11;
+}
+.fsimgWrap > img {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+}
+.fsSMCon{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fa-linkedin {
+    background: #76abae;
+    color: white;
+  }
+.fa-twitter {
+    background: #76abae;
+    color: white;
+}
+.fsSMCon > a{
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+    color: #eeeeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+.fsSMCon > a:hover{
+    border: 2px solid #eeeeee;
+    box-shadow: 4px 4px #eeeeee;
+    background-color: #222831;
+}
+#dcvbtn {
+    padding: 0 16px;
+    height: 40px;
+    outline: none;
+    border: 2ps solid #222831;
+    color: #eeeeee;
+    background-color: #76abae;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+}
+#dcvbtn:hover {
+    box-shadow: 4px 4px #eeeeee;
+}
+
+
+/* Card CSS*/ 
+.column{
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto;
+    padding-bottom: 35px;
+    padding-left: 200px;
+}
+.secondSection > h2{
+    text-align: center;
+    padding-bottom: 35px;
+    padding-top: 150px;
+    color: #eeeeee;
+}
+.card {
+    height: 225px;
+    width: 225px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    box-shadow: 0 0 20px 8px #eeeeee;
+    overflow: hidden;
+  }
+  
+   /*Image*/
+.cardImg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #76abae;
+    background: linear-gradient(to top, #76abae, #28a8af);
+}
+  
+  /*Description */
+.cardTxt {
+    display: flex;
+    position: absolute;
+    gap: .5em;
+    flex-direction: column;
+    background-color: #222831;
+    color: #eeeeee;
+    height: 70%;
+    bottom: 0;
+    border-radius: 16px;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    padding: 1rem;
+    
+}
+.SsText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.cardDescription{
+    height: 225px;
+    width: 725px;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-radius: 16px;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right:50px;
+    display: flex;
+    text-align: center;
+    margin-right: auto;
+    color: #eeeeee;
+}
+.txtBubl > p{
+    color:#eeeeee;
+    font-size: .5rem;
+}
+  /*Text*/
+.text-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+  
+.text-body {
+    font-size: 1rem;
+    line-height: 130%;
+}
+  
+  /* Hover states */
+.card:hover .cardTxt {
+    transform: translateY(100%);
+}
+.thirdSection{
+    padding-top: 25px;
+}
+.tsText > h2{
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+.fourthSection{
+    text-align: center;
+    padding-top: 150px;
+    margin: auto;
+    color: #eeeeee;
+}
+.fourthSection >h3 {
+    padding-top: 150px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+.poss{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 25%;
+}
+.contact-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #76abae;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Images for each project page*/
+.dataPics{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 90%;
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+    background: #76abae;
+    background: linear-gradient(to top, #76abae, #28a8af);
+
+}
+
+/* NSF page CSS */
+.NRFirstSection{
+    text-align: center;
+    color: #eeeeee;
+}
+
+/* Blackjack page CSS */
+.BJFirstSection{
+    text-align: center;
+    color: #eeeeee;
+}
+/* UNO page CSS */
+.UNOFSection{
+    text-align: center;
+    color: #eeeeee;
+    padding-top: 35px;
+}
